@@ -14,9 +14,22 @@ spec:
       labels:
         app: springboot-helloworld
     spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+        seccompProfile:
+          type: RuntimeDefault
       containers:
         - name: springboot-helloworld
           image: ghcr.io/nagarjun427/springboot-helloworld:7ad524f837af1f5b2dcb9b52c57871703b67394d
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: false
+            capabilities:
+              drop:
+                - ALL
           ports:
             - containerPort: 8080
           livenessProbe:
