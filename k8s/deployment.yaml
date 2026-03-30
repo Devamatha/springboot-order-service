@@ -26,7 +26,7 @@ spec:
           image: ghcr.io/nagarjun427/springboot-helloworld:7ad524f837af1f5b2dcb9b52c57871703b67394d
           envFrom:
             - configMapRef:
-                name: cocreate-env-vars
+                name: redisconfigmap
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: false
