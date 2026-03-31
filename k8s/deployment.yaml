@@ -27,6 +27,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: redis-db
+            - secretRef:
+                name: mysqlsecrets
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: false
