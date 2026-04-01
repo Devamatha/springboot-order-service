@@ -26,9 +26,9 @@ spec:
           image: ghcr.io/nagarjun427/springboot-order-service:7ad524f837af1f5b2dcb9b52c57871703b67394d
           envFrom:
             - configMapRef:
-                name: logconfig
+                name: loginfo
             - secretRef:
-                name: postgres
+                name: db-credential
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: false
