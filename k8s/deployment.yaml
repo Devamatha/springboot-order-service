@@ -23,7 +23,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: springboot-order-service
-          image: ghcr.io/nagarjun427/springboot-order-service:7ad524f837af1f5b2dcb9b52c57871703b67394d
+          image: ghcr.io/devamatha/springboot-order-service:latest
           envFrom:
             - configMapRef:
                 name: loginfo
