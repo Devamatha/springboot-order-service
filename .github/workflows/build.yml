@@ -43,7 +43,6 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/amd64
           tags: |
             ${{ env.IMAGE }}:${{ github.sha }}
             ${{ env.IMAGE }}:latest
