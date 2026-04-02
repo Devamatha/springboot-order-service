@@ -28,7 +28,7 @@ spec:
             - configMapRef:
                 name: loginfo
             - secretRef:
-                name: db-credential
+                name: redis-credentials
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: false
